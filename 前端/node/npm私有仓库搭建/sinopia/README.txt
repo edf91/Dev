@@ -1,0 +1,9 @@
+参考网址：
+sinopia地址：https://github.com/rlidwka/sinopia
+其他仓库：
+	https://segmentfault.com/a/1190000002642514
+搭建：	
+	http://web.jobbole.com/85916/
+	http://blog.csdn.net/daiyjs/article/details/50938611
+相关配置项说明：
+	http://www.wtoutiao.com/p/1f0pl01.html

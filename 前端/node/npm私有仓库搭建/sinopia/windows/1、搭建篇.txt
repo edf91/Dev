@@ -1,0 +1,41 @@
+服务器端：
+	1、安装sinopia
+		npm install -g sinopia
+	2、修改sinopia配置信息
+		打开：C:\Users\{user}\AppData\Roaming\sinopia\config.yaml
+		2.1、由于国外网速慢，修改中央仓库地址为国内地址：https://registry.npm.taobao.org或者http://registry.cnpmjs.org
+		修改：
+		uplinks:
+		  npmjs:
+		    url: https://registry.npmjs.org/
+		为：
+		uplinks:
+		  npmjs:
+		    url: https://registry.npm.taobao.org
+    3、加入listen配置项,使启动时默认监听访问服务器地址，该地址也就是服务器仓库地址。
+    	log配置项完成后空一行，再配置listen,如下所示：
+    	# log settings
+    	logs:
+    	  - {type: stdout, format: pretty, level: http}
+    	  #- {type: file, path: sinopia.log, level: info}
+    	 
+    	listen:
+    	  - http://{host}:{port}/
+   	4、启动sinopia,命令行中输入：
+   		sinopia
+客户端：修改仓库地址，建议使用nrm进行仓库的管理
+	一：使用nrm
+		1、安装nrm
+			npm install -g nrm
+		2、添加仓库
+			nrm add {新增仓库命名} http://{host}:{port}
+		3、查看添加的仓库
+			nrm ls
+		4、切换使用私服仓库
+			nrm use {仓库名称}
+		5、查看当前使用的仓库
+			nrm ls
+			[如果前面有标示*表示目前使用该仓库]
+	二：不使用nrm
+		1、使用私有仓库
+		npm set registry http://{host}:{port}/

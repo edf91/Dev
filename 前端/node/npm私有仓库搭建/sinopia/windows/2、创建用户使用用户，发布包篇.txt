@@ -1,0 +1,10 @@
+1、创建用户
+	npm adduser --registry http://{host}:{port}
+	输入用户名，密码，邮箱用户创建完毕。
+2、使用用户
+	npm login
+	输入用户名，密码，邮箱用户登录完毕。
+3、发布包
+	进入到项目根目录下，输入
+	npm publish
+4、通过浏览器访问http://{host}:{port}可以查看包情况
